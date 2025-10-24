@@ -1,0 +1,29 @@
+body {
+   
+}
+
+#diaporama {
+    position:relative; /* permettre d'accueillir correctement des éléments en position absolute */
+    overflow:hidden; /* ne pas afficher le contenu du diaporama qui en déborderait */
+    border:1px solid black;
+    height:50vh; /* 50% de la hauteur de la fenêtre */
+}
+
+/* Par défaut une image du diaporama n'est pas visible, si on veut en afficher une, il faudra le préciser */
+
+.diapo {
+    /* display:none; */
+    position:absolute; /* Superposer toutes nos images */
+    top:0;
+    left:0;
+    opacity:0;
+    width:100%;
+    height:100%;
+    object-fit: cover;
+    transition: opacity 2s;
+}
+
+.diapo.visible {
+    opacity:1;
+    /* display:block; */
+}
