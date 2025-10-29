@@ -1,9 +1,19 @@
 /* SCRIPT DIAPORAMA VERSION 2
 TODO :
 
+- Améliorations interface (voir version Bootstrap pour inspi) :
+    > boutons : aspect personnalisé
+    > boutons : inclure DANS surface diaporama
+    > boutons : prévoir aspect "surbrillance" à donner à celui correspondant à la diapo affichée
+    > diapo : plus juste une image mais possibilité d'afficher un titre / une légende
+
 - Optimiser gestion des clics sur boutons numérotés
 - Résoudre redondance entre nos 3 fonctions
 - Etre moins tributaires de la structure HTML
+
+- Confort d'utilisation : interruption du défilement automatique au survol
+
+- Gérer plusieurs diaporamas sur une même page ?
 
 */
 
@@ -60,4 +70,5 @@ function afficher_diapo(numero) {
 ////////////////////////////////////////////// Déclenchement défilement automatique
 
 var cycle = setInterval(afficher_diapo_suivante, 4000);
+
 
