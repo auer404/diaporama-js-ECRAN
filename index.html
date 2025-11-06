@@ -1,35 +1,96 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Diaporama JS</title>
     <link rel="stylesheet" href="style.css">
-    
+
 </head>
+
 <body>
 
-    <div id="diaporama">
+    <!-- Version plus intelligente (à faire fonctionner) :
 
-        <img class="diapo visible" src="images/image1.jpg">
-        <img class="diapo" src="images/image2.jpg">
-        <img class="diapo" src="images/image3.jpg">
-        <img class="diapo" src="images/image4.jpg">
-        <img class="diapo" src="images/image5.jpg">
+        - Confort de mise en place d'un point de vue intégration HTML
+            - plus besoin de prévoir d'avance les boutons : JS les génèrera automatiquement
+            - plus besoin de donner la classe "visible" à la première diapo 
+            
+        - Possibilité de faire fonctionner plusieurs diaporama sur une même page
+        NOTE : on ne peut plus utiliser un id "diaporama", c'est maintenant devenu une classe.
+    -->
+
+    <div class="diaporama">
+
+        <div class="diapo">
+            <img src="images/image1.jpg">
+            <div class="contenu_sur_diapo">
+                <h2>Diapositive 1</h2>
+            </div>
+        </div>
+
+        <div class="diapo">
+            <img src="images/image2.jpg">
+            <div class="contenu_sur_diapo">
+                <button>ACHETER !</button>
+            </div>
+        </div>
+
+        <div class="diapo">
+            <img src="images/image3.jpg">
+            <div class="contenu_sur_diapo">
+                <p>Une description ici...</p>
+                <p>Sur plusieurs paragraphes.</p>
+            </div>
+        </div>
+
+        <div class="diapo">
+            <img src="images/image4.jpg">
+        </div>
+
+        <div class="diapo">
+            <img src="images/image5.jpg">
+        </div>
 
     </div>
 
-    <button id="bouton_diapo_precedente">Diapo précédente</button>
+    <div class="diaporama">
 
-    <button id="bouton_diapo_1">1</button>
-    <button id="bouton_diapo_2">2</button>
-    <button id="bouton_diapo_3">3</button>
-    <button id="bouton_diapo_4">4</button>
-    <button id="bouton_diapo_5">5</button>
+        <div class="diapo">
+            <img src="images/image1.jpg">
+            <div class="contenu_sur_diapo">
+                <h2>Diapositive 1</h2>
+            </div>
+        </div>
 
-    <button id="bouton_diapo_suivante">Diapo suivante</button>
+        <div class="diapo">
+            <img src="images/image2.jpg">
+            <div class="contenu_sur_diapo">
+                <button>ACHETER !</button>
+            </div>
+        </div>
+
+        <div class="diapo">
+            <img src="images/image3.jpg">
+            <div class="contenu_sur_diapo">
+                <p>Une description ici...</p>
+                <p>Sur plusieurs paragraphes.</p>
+            </div>
+        </div>
+
+        <div class="diapo">
+            <img src="images/image4.jpg">
+        </div>
+
+        <div class="diapo">
+            <img src="images/image5.jpg">
+        </div>
+
+    </div>
 
     <script src="script.js"></script>
-    <!-- On place notre script à la fin de la page pour que JS ait bien pu prendre connaissance de tout le contenu avant de vouloir y faire des changements -->
+    
 </body>
+
 </html>
